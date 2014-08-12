@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
-gem "middleman", "~>3.0.5"
-gem "middleman-deploy", "~>0.0.1"
+gem "middleman", "~>3.0.11"
+gem "middleman-deploy", "~>0.1.4"
+gem "wdm", "~>0.0.3"
 
 gem "redcarpet"
 gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
