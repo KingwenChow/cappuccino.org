@@ -132,17 +132,19 @@ Cocoa and Cappuccino looks very similar:
 
 #### Cocoa sample code
 
-    :::objc
-    NSString *myString = @"hello world";
-    NSArray *myArray = [NSArray array];
-    [myArray addObject:myString];
+```objc
+NSString *myString = @"hello world";
+NSArray *myArray = [NSArray array];
+[myArray addObject:myString];
+```
 
 #### Cappuccino sample code
 
-    :::objj
-    var myString = @"hello world",
-        myArray = [CPArray array];
-    [myArray addObject:myString];
+```objj
+var myString = @"hello world",
+	myArray = [CPArray array];
+[myArray addObject:myString];
+```
 
 ## Thank You
 

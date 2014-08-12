@@ -28,7 +28,7 @@ This tutorial will be written based on Mac OS X, with notes on any differences w
 If you haven't already, download the [Cappuccino Starter package](/downloads.html). This zip file includes a sample application (`NewApplication`), licensing info, a script you can run later to download
 all the Cappuccino tools, and a README.
 
-![open new application](/img/new-application.png)
+![open new application](/img/learn_img/new-application.png)
 
 ### Running NewApplication
 
@@ -38,7 +38,7 @@ simply open that file in your favorite web browser by double-clicking
 it, or just by dragging it on top of your browser application. You
 should end up with something that looks like this (in Safari):
 
-![New Application running in Safari](/img/new-app-running-safari.png)
+![New Application running in Safari](/img/learn_img/new-app-running-safari.png)
 
 <span class="label label-info">Info</span>  This will only work in some browsers. Normally you'll need to start a web server too. We'll update this section with more information soon.
 
@@ -49,11 +49,10 @@ Although there are a few files, the only one we're interested in right
 now is `AppController.j`. The others are necessary, but you don't need
 to modify them to work on your application.
 
-![AppController.j](/img/new-app-appcontroller.png)
+![AppController.j](/img/learn_img/new-app-appcontroller.png)
 
 You can see in the image above that we have syntax highlighting in
-TextMate. You can get this by installing the appropriate mode, found on
-our [getting set up tutorial](/learn/environment.html).
+TextMate. You can get this by installing the appropriate mode.
 
 ### Making a Simple Change
 
@@ -199,7 +198,7 @@ Now the text will be centered as it toggles back and forth. For the
 complete changes, you can download this copy of
 [AppController.j](/learn/files/AppController.j).
 
-![finished version](/img/new-app-completed.png)
+![finished version](/img/learn_img/new-app-completed.png)
 
 ### Wrapping Up
 

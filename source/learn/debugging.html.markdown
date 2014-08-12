@@ -20,7 +20,7 @@ it's found under Presentation > Developers Options > JavaScript console.
 
 This is what the inspector looks like in Safari:
 
-![Main Window](tuto-debugger-0.png)
+![Main Window](/learn_img/tuto-debugger-0.png)
 
 As you can see it’s empty. You have several tools you access from the
 toolbar:
@@ -68,7 +68,7 @@ will see nothing!
 his is normal, because you have opened `index.html` which logs nothing by default. Now open
 `index-debug.html`, and select the `Console` tool:
 
-![Console](tuto-debugger-2.png)
+![Console](/learn_img/tuto-debugger-2.png)
 
 <span class="label label-info">Info</span>  You can enable logging in `index.html` as well by registering a logger using `CPLogRegister`.
 
@@ -99,7 +99,7 @@ Let’s add bad code in our `AppController.j`:
 
 Reload `index-debug.html` and look at the Console:
 
-![Oops, an error](tuto-debugger-3.png)
+![Oops, an error](/learn_img/tuto-debugger-3.png)
 
 The Console shows an error: `ReferenceError: Can't find variable: notDefinedVariable`. In this example the cause is obvious, but sometimes it’s not. Let’s imagine you can’t find the cause.
 
@@ -109,15 +109,15 @@ see the cause. The debugger has to be enabled **before** the error.
 Go to the Script tab (Safari) or the Sources (Chrome), and click on the “Enable Debugging”
 button:
 
-![Console](tuto-debugger-4.png)
+![Console](/learn_img/tuto-debugger-4.png)
 
 The Debugger will become activated. Make sure the icon with a stop sign and two parallel lines is blue or purple. This activates the "Pause on [uncaught] exceptions" feature.
 
-![Console](tuto-debugger-5.png)
+![Console](/learn_img/tuto-debugger-5.png)
 
 Reload the application. When the error occurs, the debugger will stop JavaScript execution when it encounters an exception:
 
-![Console](tuto-debugger-6.png)
+![Console](/learn_img/tuto-debugger-6.png)
 
 On the left side you can see the line of code in the code that caused the exception. On the right side you have the execution stack.
 
@@ -136,7 +136,7 @@ If you want to delve into the depths of the Objective-J runtime, take a look at 
 The Call Stack shown on the right hand side of the Debugger allows you to click on earlier calls in the execution stack to inspect what was going on at that point. You can also display the content of your objects by
 putting the mouse over a declaration:
 
-![Console](tuto-debugger-7.png)
+![Console](/learn_img/tuto-debugger-7.png)
 
 ### Setting breakpoints
 
@@ -165,7 +165,7 @@ Breakpoints allow you to specify points where code execution should automaticall
 
 If the JavaScript debugger is active when you reload the app you will see it stop execution when the `debugger` statement is executed;
 
-![Console](tuto-debugger-8.png)
+![Console](/learn_img/tuto-debugger-8.png)
 
 From here you can inspect the code, or single step forward using the debugger buttons.
 
