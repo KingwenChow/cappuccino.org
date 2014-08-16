@@ -1,0 +1,471 @@
+<!doctype html>
+<html>
+<head>
+<title>First Post, Thanks to Middleman</title>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='/img/favicon.ico' rel='shortcut icon'>
+<link href='/css/main-4751da4a.css' rel='stylesheet' type='text/css'>
+<link href='/blog/feed.xml' rel='alternate' title='FrogMan log Feed' type='application/atom+xml'>
+</head>
+<body class='file-first-post-thanks-to-middleman-html folder-blog-2014-07 folder-blog-2014 folder-blog'>
+<a class='scrolltop' href='#'>
+<span>up</span>
+</a>
+<div class='navbar navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<a class='brand' href='/'>
+<i class='f_logo'></i>
+</a>
+<div class='nav-collapse collapse'>
+<ul class='nav pull-right'>
+<li>
+<a class='scroller' href='/#features'>Features</a>
+</li>
+<li>
+<a href='/blog/'>Blog</a>
+</li>
+<li>
+<a href="../../../discover.html#discover">Download</a>
+</li>
+<li>
+<a href='/learn/'>Learn</a>
+</li>
+<li>
+<a href="../../../about.html">About</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='blog_post' id='blog_wrapper'>
+<div class='container'>
+<div class='row'>
+<div class='span8'>
+<h1 class='header'>
+First Post, Thanks to Middleman
+</h1>
+<div class='post_content'>
+<h2 id="hello-world!">Hello world!</h2>
+
+<p>I had been meaning to create a personal website for some time now and it&rsquo;s finally here!</p>
+
+<p>I&rsquo;ve had this domain up and running a Ruby on Rails app hosted on Heroku, but it was more than what I needed for a personal site.
+I never got much further than making an alternate <a href="/drew.html">homepage</a> for myself about my best friend.
+Finally, I had some convincing to really get the site going, thanks to <a href="http://middlemanapp.com">Middleman</a>.</p>
+
+<p></p>
+
+<p>I was introduced to Middleman by a friend who had hung out with him before.
+I found out that Middleman helps you generate static sites via Ruby and the <a href="http://www.sinatrarb.com">Sinatra</a> web framework.
+After realizing that I could create a <strong>free</strong> custom static blog site with the help of Middleman and Github, I became close friends with Middleman.
+We are besties now.</p>
+
+<p><img src="http://ww2.sinaimg.cn/large/dce48faejw1ej12ywt50mj20p00ge756.jpg" alt="middleman" class="blockimg"/></p>
+
+<h2 id="why-middleman?">Why Middleman?</h2>
+
+<ul>
+<li><strong>Flexible</strong> - you can add whatever code/gems you want</li>
+<li><strong>Fast</strong> - well, he spits out HTML, CSS, and Javascript; is there anything faster?</li>
+<li><strong>Simple</strong> - it&rsquo;s fast because it&rsquo;s simple, no database or backend</li>
+<li><strong>Cheap</strong> - Middleman and his components are open source and you can host a static site somewhere like <a href="https://github.com">Github</a> for free</li>
+<li><strong>Safe</strong> - since it&rsquo;s a static site there are fewer ways for someone to destroy it</li>
+<li><strong>Light</strong> - it doesn&rsquo;t give you that bloated feeling, it&rsquo;s just the right proportion</li>
+<li><strong>Familiar</strong> - that is if you&rsquo;ve used Ruby on Rails or the like before</li>
+<li><strong>Ruby</strong> - seriously an awesome language, for scripting and building websites</li>
+<li><strong>Markdown</strong> - the blog add-in allows you to write all your articles in <a href="http://daringfireball.net/projects/markdown">Markdown</a></li>
+<li><strong>Live Reload</strong> - save a file and the browser will automatically refresh with your changes, really useful when writing Markdown</li>
+<li><strong>Flexible Again</strong> - because you can use stuff like <a href="http://haml.info">Haml</a>, <a href="http://sass-lang.com">Sass</a>, <a href="http://coffeescript.org">CoffeeScript</a> etc. in any editor you want *<em>cough <a href="http://www.vim.org">Vim</a> cough</em>*</li>
+</ul>
+
+<h2 id="how-he-conducts-business">How He Conducts Business</h2>
+
+<p>Middleman is professional, clean cut and the coolest guy in the office. 
+He runs on the light Sinatra and serves flat HTML rather than dynamic pages.
+You can write Ruby code to fill out your HTML files allowing less code to be written and more flexibility.
+Things like partials, templates, and helpers allow you to keep your site better organized.
+Then you just tell Middleman to build out your site to folders containing HTML, CSS, Javascript and images.
+The blogging feature is done via writing plain Markdown files with parameters.
+Middleman will turn them in HTML and put them where they need to go.
+If you have experience with Ruby on Rails then this will be a breeze.</p>
+
+<h2 id="how-do-we-become-friends?">How Do We Become Friends?</h2>
+
+<p>First you need to understand <a href="http://code.tutsplus.com/articles/ruby-for-newbies-working-with-gems--net-18977">Ruby and RubyGems</a>. 
+Then you can start your relationship with Middleman by opening up Terminal. 
+You will need you install the Middleman gem first.
+Then run a Middleman init to get a blog ready version of Middleman in the current directory.
+That&rsquo;s all the setup required, so you can start Middleman and navigate to <a href="http://localhost:4567">http://localhost:4567</a>.</p>
+<pre><code class="highlight plaintext">$ gem install middleman
+$ middleman init BLOGNAME --template=blog
+$ cd BLOGNAME
+$ middleman
+</code></pre>
+
+<p>From here you can see that Middleman provides you with an example article and a way to browse your articles by date and tag.
+This is your start page that will uses paginate to list all your blog articles.
+You can easily move the code in <code>source/index.html.erb</code> to something like <code>source/blog.html.erb</code> if you&rsquo;d like a home page other than the blog.
+I found that moving the blog articles into a subdirectory will also keep the project a little better organized.</p>
+
+<h2 id="gemfile">Gemfile</h2>
+
+<p>The gemfile is where you can specify which gems for Middleman to use.
+I prefer to use Haml, Sass and CoffeeScript. 
+Not only do each of these use indentation to specify blocks and lack semicolons, but the each have their own additional features that make building a website that much more enjoyable.
+To use these I simply add the gems to my Gemfile, run <code>bundle install</code>, and use <code>.haml</code> instead of <code>.html</code>, <code>.sass</code> instead of <code>.css</code> and <code>.coffee</code> instead of <code>.js</code>.
+Below is my gemfile for this site.</p>
+<pre><code class="highlight ruby"><span class="n">source</span> <span class="s2">"http://rubygems.org"</span>
+
+<span class="n">gem</span> <span class="s2">"middleman"</span><span class="p">,</span> <span class="s2">"~&gt; 3.3.3"</span>
+<span class="n">gem</span> <span class="s2">"middleman-blog"</span><span class="p">,</span> <span class="s2">"~&gt; 3.5.3"</span>
+<span class="n">gem</span> <span class="s2">"middleman-favicon-maker"</span><span class="p">,</span> <span class="s2">"~&gt; 3.7"</span>
+<span class="n">gem</span> <span class="s2">"middleman-livereload"</span><span class="p">,</span> <span class="s2">"~&gt; 3.3.4"</span>
+<span class="n">gem</span> <span class="s2">"middleman-gh-pages"</span><span class="p">,</span> <span class="s2">"~&gt; 0.0.3"</span>
+<span class="n">gem</span> <span class="s2">"middleman-syntax"</span><span class="p">,</span> <span class="s2">"~&gt; 2.0.0"</span>
+<span class="n">gem</span> <span class="s2">"builder"</span><span class="p">,</span> <span class="s2">"~&gt; 3.2.2"</span>
+<span class="n">gem</span> <span class="s2">"tzinfo-data"</span><span class="p">,</span> <span class="s2">"~&gt; 1.2014.5"</span>
+<span class="n">gem</span> <span class="s2">"sass"</span><span class="p">,</span> <span class="s2">"~&gt; 3.2.17"</span>
+<span class="n">gem</span> <span class="s2">"haml"</span><span class="p">,</span> <span class="s2">"~&gt; 4.0.5"</span>
+<span class="n">gem</span> <span class="s2">"coffee-script"</span><span class="p">,</span> <span class="s2">"~&gt; 2.2.0"</span>
+<span class="n">gem</span> <span class="s2">"redcarpet"</span><span class="p">,</span> <span class="s2">"~&gt; 3.1.2"</span>
+<span class="n">gem</span> <span class="s2">"wdm"</span><span class="p">,</span> <span class="ss">:platform</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="ss">:mswin</span><span class="p">,</span> <span class="ss">:mingw</span><span class="p">]</span>
+</code></pre>
+
+<h2 id="config-file">Config File</h2>
+
+<p>Here is where you introduce yourself to <code>source/config.rb</code>.
+It&rsquo;s Middleman&rsquo;s instructions on how to create your site.
+I know you just met but he&rsquo;s used to being told what to do.
+You can change different settings and store helper methods for your site.</p>
+
+<h3 id="blog-settings">Blog Settings</h3>
+
+<p>All of the blog settings are in the config file.
+If you initialized the site with the blog template then the <code>middleman-blog</code> gem should already be in the <code>Gemfile</code>.
+To change something like the directory of your blog you will need to change <code>blog.prefix</code> to your desired subfolder name.
+<em>Note</em> I have mine configured to <code>source/blog</code>.
+You can also change other blog settings like <code>summary_separator</code>, which indicates to Middleman where an article should stop when calling <code>article.summary</code>.
+For this article I placed &ldquo;README&rdquo; before my &ldquo;Why Middleman?&rdquo; header.
+Middleman strips out the seperator when rendering the full <code>article.body</code> and preview <code>article.summary</code>.</p>
+<pre><code class="highlight ruby"><span class="c1"># Blog settings</span>
+<span class="n">activate</span> <span class="ss">:blog</span> <span class="k">do</span> <span class="o">|</span><span class="n">blog</span><span class="o">|</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">prefix</span> <span class="o">=</span> <span class="s2">"blog"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">default_extension</span> <span class="o">=</span> <span class="s2">".md"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">calendar_template</span> <span class="o">=</span> <span class="s2">"calendar.html"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">tag_template</span> <span class="o">=</span> <span class="s2">"tag.html"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">taglink</span> <span class="o">=</span> <span class="s2">"{tag}.html"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">year_link</span> <span class="o">=</span> <span class="s2">"{year}.html"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">month_link</span> <span class="o">=</span> <span class="s2">"{year}/{month}.html"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">day_link</span> <span class="o">=</span> <span class="s2">"{year}/{month}/{day}.html"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">permalink</span> <span class="o">=</span> <span class="s2">"{year}/{month}/{day}/{title}.html"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">sources</span> <span class="o">=</span> <span class="s2">"{year}-{month}-{day}-{title}.html"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">layout</span> <span class="o">=</span> <span class="s2">"article_layout"</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">summary_separator</span> <span class="o">=</span> <span class="sr">/(%READMORE%)/</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">summary_length</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">paginate</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">per_page</span> <span class="o">=</span> <span class="mi">10</span>
+  <span class="n">blog</span><span class="p">.</span><span class="nf">page_link</span> <span class="o">=</span> <span class="s2">"page/{num}"</span>
+<span class="k">end</span>
+</code></pre>
+
+<h3 id="live-reload">Live Reload</h3>
+
+<p>I highly recommend using Middleman&rsquo;s live reload feature for a better development experience.
+When enabled, he sits there watching attentively for any saved changes you make and tells your browser to refresh.
+It evens works when connected to the development site from a mobile device so you can live test your site on a different platform.
+For example, if your computer is at 10.0.1.1 then you could access your development at 10.0.1.1:4567 on a mobile device.
+Just make sure the <code>middleman-livereload</code> gem is in your <code>Gemfile</code> and add the following to <code>config.rb</code>.</p>
+<pre><code class="highlight ruby"><span class="c1"># Reload the browser automatically whenever files change</span>
+<span class="n">activate</span> <span class="ss">:livereload</span>
+</code></pre>
+
+<h3 id="relative-links">Relative Links</h3>
+
+<p>Relative assets, links, and paths tell Middleman to convert the path given to a relative path.
+For example, lets say I want to grab the image at <code>source/images/sloth.png</code>.
+I would link to the image with <code>/images/sloth.png</code>.
+Middleman would then convert the link to a relative path like <code>../../images/sloth.png</code> depending on the path currently being visited.
+This feature is <strong>required</strong> if you are going to host your site with Github pages.
+Add the following to <code>config.rb</code>.</p>
+<pre><code class="highlight ruby"><span class="c1"># Use relative links</span>
+<span class="n">activate</span> <span class="ss">:relative_assets</span>
+<span class="n">set</span> <span class="ss">:relative_links</span><span class="p">,</span> <span class="kp">true</span>
+<span class="n">set</span> <span class="ss">:relative_paths</span><span class="p">,</span> <span class="kp">true</span>
+</code></pre>
+
+<h3 id="pretty-urls">Pretty URLs</h3>
+
+<p>Middleman supplies all his friends with free URL makeovers.
+He can turn an ugly URL like <code>/contact.html</code> into something beautiful like <code>/contact</code>.
+Middleman does this by creating subfolders for each page, renaming the page to <code>index.html</code> and placing it in the subfolder.
+Take advantage of this greatness with the following in <code>config/rb</code>.</p>
+<pre><code class="highlight ruby"><span class="c1"># Pretty URLs</span>
+<span class="n">activate</span> <span class="ss">:directory_indexes</span>
+</code></pre>
+
+<h2 id="layouts-and-partials">Layouts and Partials</h2>
+
+<p>Middleman is an excellent listener and you&rsquo;ll never have to tell him the same thing twice.
+Layouts and partials allow you to specify HTML once and use it on multiple pages. </p>
+
+<h3 id="layouts">Layouts</h3>
+
+<p>Middleman will start you out with a default site layout at <code>source/layout.erb</code> that is wrapped around each page.
+Just put some HTML around a <code>yield</code> and Middleman will take care of the rest.
+The following is my layout at <code>source/layouts/layout.haml</code>, which Middleman knows to use as the default layout.</p>
+<pre><code class="highlight haml"><span class="nn">!!! 5
+</span><span class="nt">%html</span>
+  <span class="p">=</span> <span class="n">partial</span> <span class="s2">"partials/head"</span>
+  <span class="nt">%body</span><span class="p">{</span> <span class="ss">class: </span><span class="s2">"</span><span class="si">#{</span><span class="n">page_classes</span><span class="si">}</span>" }
+    <span class="p">=</span><span class="s2"> partial "</span><span class="n">partials</span><span class="o">/</span><span class="n">nav</span><span class="s2">"</span>
+    <span class="nf">#main</span><span class="p">=</span><span class="s2"> yield</span>
+    <span class="p">=</span><span class="s2"> partial "</span><span class="n">partials</span><span class="o">/</span><span class="n">footer</span><span class="s2">"</span>
+</code></pre>
+
+<h3 id="partials">Partials</h3>
+
+<p>Partials allow you to render a snippet of HTML on any page.
+You can see in my layout above I am rendering partials for the head, nav and footer of my site.
+I simply create a file at <code>source/partials/_nav.haml</code> and tell Haml to render the file at the top of my site.</p>
+
+<h3 id="nested-layouts">Nested Layouts</h3>
+
+<p>Middleman grants you the power to create a stack of layouts.
+I used this feature for rendering individual articles, both summary and full views.
+To do this, you will first need to create the new layout at <code>source/layouts/article_layout.haml</code>. </p>
+<pre><code class="highlight haml"><span class="p">=</span> <span class="n">wrap_layout</span> <span class="ss">:layout</span> <span class="k">do</span>
+  <span class="nt">%article</span>
+    <span class="p">=</span> <span class="n">partial</span> <span class="s2">"partials/article"</span><span class="p">,</span> <span class="ss">locals: </span><span class="p">{</span> <span class="ss">article: </span><span class="n">current_article</span> <span class="p">}</span>
+</code></pre>
+
+<p>Then apply this layout to all articles by adding the following to your <code>config.rb</code>.</p>
+<pre><code class="highlight ruby"><span class="c1"># Custom layout for articles</span>
+<span class="n">page</span> <span class="s2">"blog/../*"</span><span class="p">,</span> <span class="ss">layout: :article_layout</span>
+</code></pre>
+
+<p>Notice that I&rsquo;m using a partial to render an individual article, so the articles look the same on an article page and when viewing a list of articles.
+When I call this partial I pass the article in and I can also pass an optional variable to indicate if I want the article summary rendered.
+The following is my article partial. </p>
+<pre><code class="highlight haml"><span class="p">-</span> <span class="n">summary</span> <span class="o">||=</span> <span class="kp">false</span>
+
+<span class="nc">.article</span><span class="p">{</span> <span class="ss">class: </span><span class="p">(</span><span class="s2">"summary"</span> <span class="k">if</span> <span class="n">summary</span><span class="p">)</span> <span class="p">}</span>
+  <span class="nc">.title</span><span class="p">=</span> <span class="n">link_to</span> <span class="n">article</span><span class="p">.</span><span class="nf">title</span><span class="p">,</span> <span class="n">article</span>
+  <span class="nc">.date</span><span class="p">=</span> <span class="n">article</span><span class="p">.</span><span class="nf">date</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s1">'%b %e, %Y'</span><span class="p">)</span>
+  <span class="p">-</span> <span class="k">if</span> <span class="n">summary</span>
+    <span class="p">=</span> <span class="n">article</span><span class="p">.</span><span class="nf">summary</span>
+    <span class="p">-</span> <span class="k">if</span> <span class="n">article</span><span class="p">.</span><span class="nf">summary</span> <span class="o">!=</span> <span class="n">article</span><span class="p">.</span><span class="nf">body</span>
+      <span class="nt">%p</span><span class="p">=</span> <span class="n">link_to</span> <span class="s2">"Read more"</span><span class="p">,</span> <span class="n">article</span>
+  <span class="p">-</span> <span class="k">else</span>
+    <span class="p">=</span> <span class="n">article</span><span class="p">.</span><span class="nf">body</span>
+    <span class="p">=</span> <span class="n">partial</span> <span class="s2">"partials/disqus"</span>
+</code></pre>
+
+<h2 id="comments-with-disqus">Comments With Disqus</h2>
+
+<p>Disqus is an easy way to add commenting to your articles.
+Don&rsquo;t worry, Disqus and Middleman go way back.
+Simply <a href="https://disqus.com/admin/signup/?utm_source=New-Site">signup</a> and follow the instructions.
+When you are ready to paste the Disqus Javascript you can create a Disqus partial as I did and render it as above.
+Notice I only include the Disqus partial when rendering the full article.</p>
+
+<h2 id="build-that-site">Build That Site</h2>
+
+<p>Well this is the super easiest thing ever. Just run the following command and watch as Middleman generates your static site and places it in <code>build/</code>.</p>
+<pre><code class="highlight plaintext">$ bundle exec middleman build
+</code></pre>
+
+<h2 id="hosting-with-github-pages">Hosting With Github Pages</h2>
+
+<p>Now you can bascially host that static site on any webserver, but I found <a href="https://pages.github.com">Github Pages</a> convenient, free and easy to use.
+This is especially nice if you are already using Github to track your site.
+Remember that relative links, paths, and assests are <strong>required</strong> when hosting on Github.</p>
+
+<p>First you&rsquo;ll need to create a Github account and add you site to source control.
+Make sure you add <code>/build</code> to your <code>.gitignore</code> before commiting.</p>
+
+<p>Next you will need to add the <code>middleman-gh-pages</code> gem to the <code>Gemfile</code>.
+Then the following to the <code>Rakefile</code>.</p>
+<pre><code class="highlight ruby"><span class="nb">require</span> <span class="s2">"middleman-gh-pages"</span>
+</code></pre>
+
+<p>To deploy, make sure that all your changes are committed and run the following commands to build and publish the site.
+This will push the static pages created from the build to the <code>gh-pages</code> branch of your Github project.</p>
+<pre><code class="highlight plaintext">$ bundle exec rake build
+$ bundle exec rake publish
+</code></pre>
+
+<p>Then you can check out your site at <a href="http://USERNAME.github.io/BLOGNAME">http://USERNAME.github.io/BLOGNAME</a>.
+You now have a free, fast, flexible blog site!
+Just create some new blog articles and start publishing.
+You can also configure a custom domain with the project by following these <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages">instructions</a>.</p>
+
+<h2 id="all-done">All Done</h2>
+
+<p>To be completely honest, writting this article took just as long as creating my Middleman website.
+I do believe Middleman and I will stay friends for quite a while.</p>
+
+<p>You can view the <a href="https://github.com/flipxfx/flipxfx/tree/e712a293671617556e2da3e26e51f2a39a5929f3">source</a> of my website at the time of writting this article.</p>
+
+<p>And if you need more info on Middleman you can check out the superb <a href="http://middlemanapp.com/basics/getting-started">documentation</a>.</p>
+
+<a class='pull-right action' href='/blog/feed.xml' id='rss_link'>
+<img alt="RSS" width="28" height="28" src="../../../img/fm-feed-icon-b179214c.png" />
+</a>
+<div class='tags'>
+Tagged
+<a href="../../tags/programming.html">programming</a>.
+</div>
+</div>
+<ul class='pager'>
+<li class='previous disabled'>
+<span>&larr; Previous Article</span>
+</li>
+<li class='next'>
+<a href='/blog/2014/08/putian-351100-fake.html' rel='next'>Next Article &rarr;</a>
+</li>
+</ul>
+<div id='disqus_thread'></div>
+<script>
+  var disqus_container_id = 'disqus_thread',
+      disqus_domain = 'disqus.com',
+      disqus_shortname = 'frogman',
+      disqus_url = 'http://frogman.info/blog/2014/07/first-post-thanks-to-middleman.html',
+      disqus_developer = 0;
+</script>
+<script>
+  var disqus_identifier = '2014-07-26-first-post-thanks-to-middleman-md';
+</script>
+<script>
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>
+Please enable JavaScript to view the
+<a href='http://disqus.com/?ref_noscript'>
+comments powered by Disqus.
+</a>
+</noscript>
+<a class='dsq-brlink' href='http://disqus.com'>
+comments powered by
+<span class='logo-disqus'>Disqus</span>
+</a>
+</div>
+<div class='span3 sidebar offset1'>
+<form action='http://google.com/cse' id='cse-search-box'>
+<input name='cx' type='hidden' value='012644684963912217703:od8ggkygddq'>
+<input name='ie' type='hidden' value='UTF-8'>
+<input class='input-large search-query' name='q' placeholder='Search' size='31' type='text'>
+<!-- %input.btn{:name => "sa", :type => "submit", :value => "Search"}/ -->
+</form>
+<h4 class='sidebar_header'>
+Recent posts
+</h4>
+<ul class='recent_posts'>
+<li>
+<a href='/blog/2014/08/article-test.html'>Article Test</a>
+</li>
+<li>
+<a href='/blog/2014/08/putian-351100-fake.html'>莆田仿货鞋产业链解密</a>
+</li>
+<li>
+<a href='/blog/2014/07/first-post-thanks-to-middleman.html'>First Post, Thanks to Middleman</a>
+</li>
+</ul>
+<h4 class='sidebar_header'>
+Tags
+</h4>
+<ul class='tags'>
+<li>
+<a href='/blog/tags/programming.html'>programming</a>
+</li>
+<li>
+<a href='/blog/tags/putian.html'>Putian</a>
+</li>
+<li>
+<a href='/blog/tags/fake.html'>fake</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id='footer'>
+<div class='container'>
+<div class='row'>
+<div class='span6 links'>
+<h3>Links</h3>
+<div class='row'>
+<div class='span2'>
+<h4>Get Started</h4>
+<a href="/#features">Features</a>
+<a href="/learn/">Tutorials</a>
+<a href="../../../discover.html">Download</a>
+<a href="/learn/documentation/">API Docs</a>
+</div>
+<div class='span2'>
+<h4>Contribute</h4>
+<a></a>
+<a href="../../../about.html#bug-reports">Bug reports</a>
+<a href="https://github.com/cappuccino/cappuccino">Source code</a>
+<a href="https://github.com/cappuccino/cappuccino/wiki">Wiki</a>
+</div>
+<div class='span2'>
+<h4>Get Answers</h4>
+<a href="/support/">Support</a>
+<a href="http://groups.google.com/group/objectivej">Mailing list</a>
+<a href="http://webchat.freenode.net/?channels=cappuccino">#cappuccino IRC</a>
+<a href="/blog/">Blog</a>
+<a href="../../../support/faq.html">FAQ</a>
+</div>
+</div>
+</div>
+<div class='span6 stats'>
+<h3>Stats</h3>
+<div class='row'>
+<div class='span2'>
+<h4>码</h4>
+<a href="http://frogman.info"><img height='100' src='/img/fm_stats-43667da2.png' width='100'>
+</a></div>
+</div>
+</div>
+</div>
+<hr>
+<div class='row copyright'>
+<div class='span2'>
+<h3>Social</h3>
+<a class='social gp' href='https://google.com/+kingwenchow'>
+<i class='i_gplus'></i>
+</a>
+</div>
+<div class='span8 copyright2'>
+<p><img alt="" width="15" height="15" src="img/fm_foot-middleman-38ce37d3.png" /> Powered by <a href="http://middlemanapp.com">Middleman</a>. Hosted on <img alt="" width="16" height="14" src="img/fm_foot-github-b7c49914.png" /><a href="https://pages.github.com">Github Pages</a>. My <img alt="" width="58" height="20" src="img/fm_foot-copycat-187a2735.png" /> is drinking <a href="https://github.com/cappuccino/cappuccino.org">Cappuccino</a>.</p>
+</div>
+<div class='pull-right forkme'>
+<p>
+<a href="https://github.com/cappuccino/cappuccino.org">Fork and edit this site.</a>
+</p>
+</div>
+</div>
+</hr>
+</div>
+</div>
+<script src='http://code.jquery.com/jquery-latest.js'></script>
+<script src='/js/bootstrap.min-f6d9c45d.js'></script>
+<script src='/js/theme-09250c02.js'></script>
+<script src='/js/jquery.event.move-1a4d4482.js'></script>
+<script src='/js/jquery.twentytwenty-abd48ae0.js'></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+<title>Cappuccino - What is Cappuccino?</title>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='/img/favicon.ico' rel='shortcut icon'>
+<link href='/css/main-4751da4a.css' rel='stylesheet' type='text/css'>
+<link href='/blog/feed.xml' rel='alternate' title='FrogMan log Feed' type='application/atom+xml'>
+</head>
+<body class='file-index-html folder-learn'>
+<a class='scrolltop' href='#'>
+<span>up</span>
+</a>
+<div class='navbar navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<a class='brand' href='/'>
+<i class='f_logo'></i>
+</a>
+<div class='nav-collapse collapse'>
+<ul class='nav pull-right'>
+<li>
+<a class='scroller' href='/#features'>Features</a>
+</li>
+<li>
+<a href='/blog/'>Blog</a>
+</li>
+<li>
+<a href="../discover.html#discover">Download</a>
+</li>
+<li>
+<a href='/learn/'>Learn</a>
+</li>
+<li>
+<a href="../about.html">About</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='container learn'>
+<h2 class='section_header'>
+<hr class='left visible-desktop'>
+<span>Learn</span>
+<hr class='right visible-desktop'>
+</h2>
+<div class='row'>
+<div class='span3'>
+<ul class='nav nav-tabs nav-stacked'>
+<li class='active'>
+<a href="./">What is Cappuccino?</a>
+</li>
+<li>
+<a href="starter.html">Get Started</a>
+</li>
+<li>
+<a href="build-source.html">Advanced: Install from Source</a>
+</li>
+<li>
+<a href="objective-j.html">Learning Objective-J</a>
+</li>
+<li>
+<a href="debugging.html">Debugging</a>
+</li>
+<li>
+<a href="frogman.html">frogman</a>
+</li>
+</ul>
+<h5>Resources</h5>
+<ul class='nav nav-tabs nav-stacked'>
+<li>
+<a href="markdown-syntax-CN.html">Markdown 语法说明</a>
+</li>
+<li>
+<a href="github-cheat-sheet-CN.html">GitHub 秘籍</a>
+</li>
+<li>
+<a href="../support/faq.html">FAQ</a>
+</li>
+</ul>
+</div>
+<div class='span9 text-body markdown'>
+<h3>
+What is Cappuccino?
+</h3>
+<p>Cappuccino is an open source application framework for developing
+applications that look and feel like the desktop software users are
+familiar with.</p>
+
+<p>Cappuccino is built on top of standard web technologies like JavaScript,
+and it implements most of the familiar APIs from GNUstep and Apple&rsquo;s
+Cocoa frameworks. When you program in Cappuccino, you don&rsquo;t need to
+concern yourself with the complexities of traditional web technologies
+like HTML, CSS, or even the DOM. The unpleasantries of building complex
+cross browser applications are abstracted away for you.</p>
+
+<p>Cappuccino was implemented using a new programming language called
+Objective-J, which is modelled after Objective-C and built entirely on
+top of JavaScript. Programs written in Objective-J are interpreted in
+the client, so no compilation or plugins are required. Objective-J is
+released alongside Cappuccino in this project and under the
+<a href="lgpl.txt">LGPL</a>.</p>
+
+<h2 id="designed-for-applications">Designed for Applications</h2>
+
+<p>Nobody will deny that there is a distinct difference between a web site
+and a desktop application. Similarly, we believe there is a big
+difference between a static web page and a full fledged web application.
+Cappuccino is designed for applications, not web pages.</p>
+
+<p>Instead of doing all or most of the work on the server, Cappuccino
+applications do as much as possible in the client. A typical application
+would never reload, but rather send and recieve data using traditional
+AJAX techniques and then present that data in the client code.</p>
+
+<p>Instead of worrying about how to implement drag and drop, copy and paste
+(of text <em>and objects</em>), undo and redo, document saving, rich
+cross-browser drawing and graphics, and a slew of other features,
+developers are free to focus on specific problems like PowerPoint
+support, or Twitter integration, or whatever else makes their
+application unique and compelling.</p>
+
+<h2 id="how-does-cappuccino-compare-to-other-frameworks?">How does Cappuccino Compare to Other Frameworks?</h2>
+
+<p>Cappuccino is <em>not</em> designed for building web sites, or making existing
+sites more &ldquo;dynamic&rdquo;. We think these goals are too far removed from
+those of application development to be served well by a single
+framework. Projects like Prototype and jQuery are excellent at those
+tasks, but they are forced by their nature to make compromises which
+render them ineffective at application development.</p>
+
+<p>On the other end of the existing frameworks are technologies like
+SproutCore. While SproutCore set out with similar goals to Cappuccino,
+it takes a distincly different approach. It still relies on HTML, CSS,
+JavaScript, Prototype, and an entirely new and unique set of APIs. It
+also requires special development software and a cumbersome compilation
+step. We think this is the wrong approach.</p>
+
+<p>With Cappuccino, you don&rsquo;t need to know HTML. You&rsquo;ll never write a line
+of CSS. You don&rsquo;t ever have to interact with DOM. We only ask developers to
+learn one technology, Objective-J, and one set of APIs. Plus, these
+technologies are implementations of well known and well understood
+existing ones. Developers can leverage decades of collective experience
+to really accelerate the pace of building rich web applications.</p>
+
+<p>If you want to build a rich web application, you need to learn
+<em>something</em> new. Many people think this will be JavaScript 2, or HTML 5,
+or some new standard. The problem is, as we&rsquo;ve come to realize,
+standards bodies work too slowly. Cappuccino works right now, not in the
+theoretical future. Objective-J is essentially JavaScript 2, but
+available today in every major browser. Because we rely on only the most
+essential web technologies, improvements are not limited by the pace of
+browser vendors and standards bodies.</p>
+
+<h2 id="browsers">Browsers</h2>
+
+<p>Cappuccino and Objective-J run in any modern web browser, including:</p>
+
+<ul>
+<li>  Internet Explorer 8+</li>
+<li>  Firefox 2+</li>
+<li>  Safari 3+</li>
+<li>  Google Chrome</li>
+<li>  Opera 9+</li>
+</ul>
+
+<h2 id="when-should-i-use-cappuccino?">When should I use Cappuccino?</h2>
+
+<p>Before reading any further, please note that Cappuccino is not like
+jQuery or Mootools. Cappuccino is <strong>not</strong> good at making websites. It’s
+good for making web applications.</p>
+
+<p>Cappuccino <strong>rocks</strong> at:</p>
+
+<ul>
+<li>Creating a real time application with a lot of user interaction.</li>
+<li>Creating a backend for an advanced corporate website.</li>
+<li>Creating a mockup application.</li>
+<li>Creating a smooth Twitter client.</li>
+<li>Creating a nice email client.</li>
+<li>Making an online RSS reader.</li>
+<li>So much more.</li>
+</ul>
+
+<p>Cappuccino is <strong>not</strong> meant:</p>
+
+<ul>
+<li>To make your company corporate website.</li>
+<li>For a blog.</li>
+<li>As a widget in your existing website.</li>
+</ul>
+
+<p>The best way to know if Cappuccino is what you want and what you need is
+to ask yourself:</p>
+
+<blockquote>
+<p>“Does it make sense to make a native desktop application of my
+project?”</p>
+</blockquote>
+
+<p>If the answer is “yes”, then you should definitly give Cappuccino a try.
+It will greatly improve your developement time thanks to a powerful
+foundation, great controls and cool toolchain.</p>
+
+<h2 id="what-is-cappuccino-really?">What is Cappuccino really?</h2>
+
+<p>Cappuccino is GNUStep or Cocoa for the web. Cocoa is the set of
+libraries and frameworks used to create both Mac OS and iOS
+applications.</p>
+
+<ul>
+<li>  Cocoa relies on Objective-C, a superset of C which adds <strong>real</strong>
+object-oriented programming.</li>
+<li>  Cappuccino relies on Objective-J, a superset of JavaScript which
+adds <strong>real</strong> object-oriented programming.</li>
+</ul>
+
+<p>With Cocoa, you can build amazing apps for iOS or Mac OS X devices. With
+Cappuccino you can build awesome apps for anybody with a web browser.
+Cappuccino abstracts away the underlying JavaScript and DOM management.
+The code you’ll write will work <strong>as is</strong> in Firefox, Chrome, Safari and
+Internet Explorer.</p>
+
+<p>To use Cappuccino, some knowledge of Cocoa is recommended, in particular
+its key concepts. As you can see from the following examples, code in
+Cocoa and Cappuccino looks very similar:</p>
+
+<h4 id="cocoa-sample-code">Cocoa sample code</h4>
+<pre><code class="highlight objective_c"><span class="n">NSString</span> <span class="o">*</span><span class="n">myString</span> <span class="o">=</span> <span class="s">@"hello world"</span><span class="p">;</span>
+<span class="n">NSArray</span> <span class="o">*</span><span class="n">myArray</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nf">array</span><span class="p">];</span>
+<span class="p">[</span><span class="n">myArray</span> <span class="nf">addObject</span><span class="p">:</span><span class="n">myString</span><span class="p">];</span>
+</code></pre>
+
+<h4 id="cappuccino-sample-code">Cappuccino sample code</h4>
+<pre><code class="highlight plaintext">var myString = @"hello world",
+    myArray = [CPArray array];
+[myArray addObject:myString];
+</code></pre>
+
+<h2 id="thank-you">Thank You</h2>
+
+<p>Obviously, like everyone else in the open source world, we owe a great
+deal of thanks to others, including several existing projects. Among
+them are:</p>
+
+<ul>
+<li>  <a href="http://www.gnustep.org/">GNU Step</a></li>
+<li>  <a href="http://www.cocotron.org/">Cocotron</a></li>
+</ul>
+
+<h2 id="more-information">More Information</h2>
+
+<p>You can learn more about using Cappuccino and Objective-J in this tutorial or by browsing
+<a href="/learn/documentation/">documentation</a>.</p>
+
+</div>
+</div>
+<div class='row'>
+<div class='offset3 span9'>
+<div class='learn-nav'>
+<ul class='pager'>
+<li class='previous disabled'>
+<span>
+&larr; Previous
+</span>
+</li>
+<li class='next'>
+<a href="starter.html">Continue to '
+Get Started
+' &rarr;
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id='footer'>
+<div class='container'>
+<div class='row'>
+<div class='span6 links'>
+<h3>Links</h3>
+<div class='row'>
+<div class='span2'>
+<h4>Get Started</h4>
+<a href="/#features">Features</a>
+<a href="/learn/">Tutorials</a>
+<a href="../discover.html">Download</a>
+<a href="/learn/documentation/">API Docs</a>
+</div>
+<div class='span2'>
+<h4>Contribute</h4>
+<a></a>
+<a href="../about.html#bug-reports">Bug reports</a>
+<a href="https://github.com/cappuccino/cappuccino">Source code</a>
+<a href="https://github.com/cappuccino/cappuccino/wiki">Wiki</a>
+</div>
+<div class='span2'>
+<h4>Get Answers</h4>
+<a href="/support/">Support</a>
+<a href="http://groups.google.com/group/objectivej">Mailing list</a>
+<a href="http://webchat.freenode.net/?channels=cappuccino">#cappuccino IRC</a>
+<a href="/blog/">Blog</a>
+<a href="../support/faq.html">FAQ</a>
+</div>
+</div>
+</div>
+<div class='span6 stats'>
+<h3>Stats</h3>
+<div class='row'>
+<div class='span2'>
+<h4>码</h4>
+<a href="http://frogman.info"><img height='100' src='/img/fm_stats-43667da2.png' width='100'>
+</a></div>
+</div>
+</div>
+</div>
+<hr>
+<div class='row copyright'>
+<div class='span2'>
+<h3>Social</h3>
+<a class='social gp' href='https://google.com/+kingwenchow'>
+<i class='i_gplus'></i>
+</a>
+</div>
+<div class='span8 copyright2'>
+<p><img alt="" width="15" height="15" src="img/fm_foot-middleman-38ce37d3.png" /> Powered by <a href="http://middlemanapp.com">Middleman</a>. Hosted on <img alt="" width="16" height="14" src="img/fm_foot-github-b7c49914.png" /><a href="https://pages.github.com">Github Pages</a>. My <img alt="" width="58" height="20" src="img/fm_foot-copycat-187a2735.png" /> is drinking <a href="https://github.com/cappuccino/cappuccino.org">Cappuccino</a>.</p>
+</div>
+<div class='pull-right forkme'>
+<p>
+<a href="https://github.com/cappuccino/cappuccino.org">Fork and edit this site.</a>
+</p>
+</div>
+</div>
+</hr>
+</div>
+</div>
+<script src='http://code.jquery.com/jquery-latest.js'></script>
+<script src='/js/bootstrap.min-f6d9c45d.js'></script>
+<script src='/js/theme-09250c02.js'></script>
+<script src='/js/jquery.event.move-1a4d4482.js'></script>
+<script src='/js/jquery.twentytwenty-abd48ae0.js'></script>
+</body>
+</html>

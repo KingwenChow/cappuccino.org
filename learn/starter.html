@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+<head>
+<title>Cappuccino - Get Started</title>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='/img/favicon.ico' rel='shortcut icon'>
+<link href='/css/main-4751da4a.css' rel='stylesheet' type='text/css'>
+<link href='/blog/feed.xml' rel='alternate' title='FrogMan log Feed' type='application/atom+xml'>
+</head>
+<body class='file-starter-html folder-learn'>
+<a class='scrolltop' href='#'>
+<span>up</span>
+</a>
+<div class='navbar navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<a class='brand' href='/'>
+<i class='f_logo'></i>
+</a>
+<div class='nav-collapse collapse'>
+<ul class='nav pull-right'>
+<li>
+<a class='scroller' href='/#features'>Features</a>
+</li>
+<li>
+<a href='/blog/'>Blog</a>
+</li>
+<li>
+<a href="../discover.html#discover">Download</a>
+</li>
+<li>
+<a href='/learn/'>Learn</a>
+</li>
+<li>
+<a href="../about.html">About</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='container learn'>
+<h2 class='section_header'>
+<hr class='left visible-desktop'>
+<span>Learn</span>
+<hr class='right visible-desktop'>
+</h2>
+<div class='row'>
+<div class='span3'>
+<ul class='nav nav-tabs nav-stacked'>
+<li>
+<a href="./">What is Cappuccino?</a>
+</li>
+<li class='active'>
+<a href="starter.html">Get Started</a>
+</li>
+<li>
+<a href="build-source.html">Advanced: Install from Source</a>
+</li>
+<li>
+<a href="objective-j.html">Learning Objective-J</a>
+</li>
+<li>
+<a href="debugging.html">Debugging</a>
+</li>
+<li>
+<a href="frogman.html">frogman</a>
+</li>
+</ul>
+<h5>Resources</h5>
+<ul class='nav nav-tabs nav-stacked'>
+<li>
+<a href="markdown-syntax-CN.html">Markdown 语法说明</a>
+</li>
+<li>
+<a href="github-cheat-sheet-CN.html">GitHub 秘籍</a>
+</li>
+<li>
+<a href="../support/faq.html">FAQ</a>
+</li>
+</ul>
+</div>
+<div class='span9 text-body markdown'>
+<h3>
+Get Started
+</h3>
+<h3 id="supported-platforms">Supported platforms</h3>
+
+<p>Cappuccino is supported on the following platforms:</p>
+
+<table class="table span9">
+<tbody><tr>
+<th>Platform</th>
+<th>Supported features</th>
+</tr>
+<tr>
+<td>Mac OS X</td>
+<td>Toolchain, Interface Builder</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>Toolchain</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Toolchain with installation of <a href="http://cygwin.org">Cygwin</a></td>
+</tr>
+</tbody></table>
+
+<p>This tutorial will be written based on Mac OS X, with notes on any differences with other platforms included.</p>
+
+<h3 id="downloading-&amp;-running-the-sample-application">Downloading &amp; Running the Sample Application</h3>
+
+<p>If you haven&rsquo;t already, download the <a href="/downloads.html">Cappuccino Starter package</a>. This zip file includes a sample application (<code>NewApplication</code>), licensing info, a script you can run later to download
+all the Cappuccino tools, and a README.</p>
+
+<p><img alt="open new application" src="../img/learn_img/new-application.png" /></p>
+
+<h3 id="running-newapplication">Running NewApplication</h3>
+
+<p>Once you&rsquo;ve downloaded and unzipped the Cappuccino Starter package, open
+up the <code>NewApplication</code> folder, and locate the <code>index.html</code> file. Now,
+simply open that file in your favorite web browser by double-clicking
+it, or just by dragging it on top of your browser application. You
+should end up with something that looks like this (in Safari):</p>
+
+<p><img alt="New Application running in Safari" src="../img/learn_img/new-app-running-safari.png" /></p>
+
+<p><span class="label label-info">Info</span>  This will only work in some browsers. Normally you&rsquo;ll need to start a web server too. We&rsquo;ll update this section with more information soon.</p>
+
+<h3 id="the-code">The Code</h3>
+
+<p>The source behind this sample application is startingly simple.
+Although there are a few files, the only one we&rsquo;re interested in right
+now is <code>AppController.j</code>. The others are necessary, but you don&rsquo;t need
+to modify them to work on your application.</p>
+
+<p><img alt="AppController.j" src="../img/learn_img/new-app-appcontroller.png" /></p>
+
+<p>You can see in the image above that we have syntax highlighting in
+TextMate. You can get this by installing the appropriate mode.</p>
+
+<h3 id="making-a-simple-change">Making a Simple Change</h3>
+
+<p>Now let&rsquo;s see what it takes to make a simple addition to NewApplication.
+We&rsquo;ll add a button that toggles the text on the screen between &ldquo;Hello
+World!&rdquo; and &ldquo;Goodbye!&rdquo;. After the line that contains <code>[contentView
+addSubview:label]</code> (line 31), add the following code snippet:</p>
+<pre><code class="highlight plaintext">:::objj
+var button = [[CPButton alloc] initWithFrame: CGRectMake(
+                CGRectGetWidth([contentView bounds])/2.0 - 40,
+                CGRectGetMaxY([label frame]) + 10,
+                80, 24
+             )];
+
+[button setAutoresizingMask:CPViewMinXMargin |
+                            CPViewMaxXMargin |
+                            CPViewMinYMargin |
+                            CPViewMaxYMargin];
+
+[button setTitle:"swap"];
+
+[button setTarget:self];
+[button setAction:@selector(swap:)];
+
+[contentView addSubview:button];
+</code></pre>
+
+<p>Now, refresh your browser, and you should see a button right below
+&ldquo;Hello World!&rdquo;. It won&rsquo;t work just yet, because we haven&rsquo;t told it what
+to do when the button is pressed. Before we do that, let&rsquo;s quickly go
+over what each of the previous lines does:</p>
+<pre><code class="highlight plaintext">:::objj
+var button = [[CPButton alloc] initWithFrame: CGRectMake(
+                CGRectGetWidth([contentView bounds])/2.0 - 40,
+                CGRectGetMaxY([label frame]) + 10,
+                80, 24
+             )];
+</code></pre>
+
+<p>This line instantiates a new <code>CPButton</code> object, and places it 40 pixels to
+the left of the center of its parent view, and 10 pixels below the
+bottom of the label above it. It&rsquo;s 80 pixels wide, and 24 pixels tall.
+<code>CGRectMake</code> is the main way to create a <code>CGRect</code>, which is the object
+that describes the size and positioning of every view in Cappuccino.
+<code>[contentView bounds]</code> returns the <code>CGRect</code>of <code>view</code>, but without its
+positioning information. <code>[label frame]</code> return the <code>CGRect</code> of the label,
+including its position information.</p>
+<pre><code class="highlight plaintext">:::objj
+[button setAutoresizingMask:CPViewMinXMargin |
+                            CPViewMaxXMargin |
+                            CPViewMinYMargin |
+                            CPViewMaxYMargin];
+</code></pre>
+
+<p>Auto-resize flags define how a view resizes when its parent resizes
+(all the way up to the window). In this case, it&rsquo;s saying that it would
+like to have flexible space above, below, to the right, and to the left.
+In other words, stay in the center, and don&rsquo;t change size.</p>
+<pre><code class="highlight plaintext">:::objj
+[button setTitle:"swap"];
+</code></pre>
+
+<p>Set the title of the button to &ldquo;swap&rdquo;.</p>
+<pre><code class="highlight plaintext">:::objj
+[button setTarget:self];
+[button setAction:@selector(swap:)];
+</code></pre>
+
+<p>In Cappuccino, as in OpenStep and Cocoa, controls like buttons use the
+target/action mechanism for defining their behavior. Think of this as
+the equivalent to DOM elements&#39; onclick, but much more powerful. In the
+code above, we&rsquo;re setting <code>self</code> (the <code>AppController</code> instance) to be
+our target, and <code>swap:</code> to be our action. This means that when the
+button is pressed, we&rsquo;ll send the <code>swap:</code> message to <code>self</code>, which
+would be equivalent to writing <code>[self swap:button]</code>. You&rsquo;ll notice
+<code>swap:</code> takes one parameter. By default, actions usually have one
+parameter, called <code>sender</code>, so that you can know who is requesting
+this action take place (in this case it is the button). This can provide
+useful context when multiple buttons or views have the same target and
+action.</p>
+<pre><code class="highlight plaintext">:::objj
+[contentView addSubview:button];
+</code></pre>
+
+<p>Finally, in this last line, we add our button as a subview of the
+window&rsquo;s content view. The content view is the root view of a window,
+and so the first place you&rsquo;d put any additional views.</p>
+
+<p>As it currently stands, <code>label</code> is scoped to just exist within
+<code>applicationDidFinishLaunching:</code>, which means it won&rsquo;t be accessible in
+<code>swap:</code> or any other methods. So instead of making it a local variable,
+lets make it an <strong>instance variable</strong> of <code>AppController</code>. To do this we
+simply need to add it to our class declaration by replacing:</p>
+<pre><code class="highlight objective_c"><span class="o">:::</span><span class="n">objj</span>
+<span class="k">@implementation</span> <span class="nc">AppController</span> <span class="p">:</span> <span class="nc">CPObject</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>with:</p>
+<pre><code class="highlight objective_c"><span class="o">:::</span><span class="n">objj</span>
+<span class="k">@implementation</span> <span class="nc">AppController</span> <span class="p">:</span> <span class="nc">CPObject</span>
+<span class="p">{</span>
+    <span class="n">CPTextField</span> <span class="n">label</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Now, let&rsquo;s take out the var keyword in the original declaration of
+<code>label</code>.</p>
+<pre><code class="highlight plaintext">var label = [[CPTextField alloc] initWithFrame:CGRectMakeZero()];
+</code></pre>
+
+<p>becomes:</p>
+<pre><code class="highlight plaintext">label = [[CPTextField alloc] initWithFrame:CGRectMakeZero()];
+</code></pre>
+
+<p>Now we need to actually add the swap method. Add the following code
+after the closing bracket of the <code>applicationDidFinishLaunching:</code>
+method:</p>
+<pre><code class="highlight plaintext">- (void)swap:(id)sender
+{
+    if ([label stringValue] == "Hello World!")
+        [label setStringValue:"Goodbye!"];
+    else
+        [label setStringValue:"Hello World!"];
+}
+</code></pre>
+
+<p>This code checks what the current value of <code>label</code> is and uses that to
+decide what to set the new value to.</p>
+
+<p>Now you should be able to run this new code by saving <code>AppController.j</code>
+and hitting refresh in your browser. Click the button, and you should
+see the string change back and forth between &ldquo;Hello World!&rdquo; and
+&ldquo;Goodbye!&rdquo;.</p>
+
+<p>For a finishing touch, add this line after you create the label in
+<code>applicationDidFinishLaunching:</code></p>
+<pre><code class="highlight plaintext">[label setAlignment:CPCenterTextAlignment];
+</code></pre>
+
+<p>Now the text will be centered as it toggles back and forth. For the
+complete changes, you can download this copy of
+<a href="files/AppController.j">AppController.j</a>.</p>
+
+<p><img alt="finished version" src="../img/learn_img/new-app-completed.png" /></p>
+
+<h3 id="wrapping-up">Wrapping Up</h3>
+
+<p>This concludes our quick introduction to the Cappuccino Starter package,
+and to modifying your first application. Now that you&rsquo;ve got your feet
+wet, you can move on to a more advanced tutorial.</p>
+
+</div>
+</div>
+<div class='row'>
+<div class='offset3 span9'>
+<div class='learn-nav'>
+<ul class='pager'>
+<li class='previous'>
+<a href="./">&larr; Return to '
+What is Cappuccino?
+'
+</a></li>
+<li class='next'>
+<a href="build-source.html">Continue to '
+Advanced: Install from Source
+' &rarr;
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id='footer'>
+<div class='container'>
+<div class='row'>
+<div class='span6 links'>
+<h3>Links</h3>
+<div class='row'>
+<div class='span2'>
+<h4>Get Started</h4>
+<a href="/#features">Features</a>
+<a href="/learn/">Tutorials</a>
+<a href="../discover.html">Download</a>
+<a href="/learn/documentation/">API Docs</a>
+</div>
+<div class='span2'>
+<h4>Contribute</h4>
+<a></a>
+<a href="../about.html#bug-reports">Bug reports</a>
+<a href="https://github.com/cappuccino/cappuccino">Source code</a>
+<a href="https://github.com/cappuccino/cappuccino/wiki">Wiki</a>
+</div>
+<div class='span2'>
+<h4>Get Answers</h4>
+<a href="/support/">Support</a>
+<a href="http://groups.google.com/group/objectivej">Mailing list</a>
+<a href="http://webchat.freenode.net/?channels=cappuccino">#cappuccino IRC</a>
+<a href="/blog/">Blog</a>
+<a href="../support/faq.html">FAQ</a>
+</div>
+</div>
+</div>
+<div class='span6 stats'>
+<h3>Stats</h3>
+<div class='row'>
+<div class='span2'>
+<h4>码</h4>
+<a href="http://frogman.info"><img height='100' src='/img/fm_stats-43667da2.png' width='100'>
+</a></div>
+</div>
+</div>
+</div>
+<hr>
+<div class='row copyright'>
+<div class='span2'>
+<h3>Social</h3>
+<a class='social gp' href='https://google.com/+kingwenchow'>
+<i class='i_gplus'></i>
+</a>
+</div>
+<div class='span8 copyright2'>
+<p><img alt="" width="15" height="15" src="img/fm_foot-middleman-38ce37d3.png" /> Powered by <a href="http://middlemanapp.com">Middleman</a>. Hosted on <img alt="" width="16" height="14" src="img/fm_foot-github-b7c49914.png" /><a href="https://pages.github.com">Github Pages</a>. My <img alt="" width="58" height="20" src="img/fm_foot-copycat-187a2735.png" /> is drinking <a href="https://github.com/cappuccino/cappuccino.org">Cappuccino</a>.</p>
+</div>
+<div class='pull-right forkme'>
+<p>
+<a href="https://github.com/cappuccino/cappuccino.org">Fork and edit this site.</a>
+</p>
+</div>
+</div>
+</hr>
+</div>
+</div>
+<script src='http://code.jquery.com/jquery-latest.js'></script>
+<script src='/js/bootstrap.min-f6d9c45d.js'></script>
+<script src='/js/theme-09250c02.js'></script>
+<script src='/js/jquery.event.move-1a4d4482.js'></script>
+<script src='/js/jquery.twentytwenty-abd48ae0.js'></script>
+</body>
+</html>
